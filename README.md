@@ -1,0 +1,1 @@
+Collabrix is a real-time collaboration platform built for student developer teams to manage projects, communicate, share tasks, and collaborate seamlessly in one workspace.
