@@ -1,0 +1,1 @@
+﻿const { PrismaClient } = require("@prisma/client");\nconst prisma = new PrismaClient();\n\nasync function main() {\n  await prisma.user.upsert({\n    where: { email: "admin@collabrix.dev" },\n    update: {},\n    create: { email: "admin@collabrix.dev", name: "Admin" },\n  });\n}\n\nmain().catch(console.error).finally(() => prisma.$disconnect());\n
