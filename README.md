@@ -101,30 +101,63 @@ Collabrix brings it all together — real-time chat, task management, project or
 ## Project Structure
 
 ```
-collabrix/
+COLLABRIX/
 │
-├── frontend/
-│   ├── app/
-│   ├── components/
-│   ├── features/
-│   ├── hooks/
-│   ├── lib/
-│   ├── services/
-│   ├── store/
-│   ├── styles/
-│   ├── utils/
-│   └── public/
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── hooks/
+│   │   ├── layouts/
+│   │   ├── lib/
+│   │   ├── pages/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Landing.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── NotFound.jsx
+│   │   │   ├── Project.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── Workspace.jsx
+│   │   ├── store/
+│   │   ├── utils/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── routes.jsx
+│   │   └── index.css
+│   │
+│   ├── .env
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   └── postcss.config.js
 │
-└── backend/
-    ├── config/
-    ├── controllers/
-    ├── middleware/
-    ├── models/
-    ├── routes/
-    ├── services/
-    ├── sockets/
-    ├── utils/
-    └── server.js
+├── server/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   │   ├── aiController.js
+│   │   │   ├── authController.js
+│   │   │   ├── chatController.js
+│   │   │   ├── projectController.js
+│   │   │   ├── taskController.js
+│   │   │   └── workspaceController.js
+│   │   │
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── sockets/
+│   │   ├── utils/
+│   │   ├── app.js
+│   │   └── server.js
+│   │
+│   ├── .env
+│   ├── package.json
+│   └── node_modules/
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -250,26 +283,3 @@ Collabrix is intentionally built in JavaScript for faster iteration, easier onbo
 
 ---
 
-## Contributing
-
-Contributions are welcome. Please open an issue before submitting a pull request so we can discuss the change first.
-
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'add: your feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a pull request
-
----
-
-## License
-
-[MIT](LICENSE)
-
----
-
-<div align="center">
-
-Built for teams who build things.
-
-</div>
