@@ -201,7 +201,7 @@ Socket.IO powers live collaboration across:
 
 ```bash
 # Clone the repo
-git clone https://github.com/javawithaaryan/Collabrix.git
+git clone https://github.com/your-username/collabrix.git
 cd collabrix
 
 # Install frontend dependencies
@@ -210,7 +210,7 @@ npm install
 
 # Install backend dependencies
 cd ../backend
-npm install 
+npm install
 ```
 
 Create a `.env` file in the backend directory:
