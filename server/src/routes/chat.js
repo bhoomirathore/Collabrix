@@ -1,1 +1,17 @@
-﻿import { Router } from "express";\nimport { getMessages } from "../controllers/chatController.js";\nconst router = Router();\nrouter.get("/", getMessages);\nexport default router;
+import { Router } from "express";
+import {
+  getMessages,
+  sendMessage,
+  addReaction,
+} from "../controllers/chatController.js";
+import authMiddleware from "../middleware/auth.js";
+
+const router = Router();
+
+router.use(authMiddleware);
+
+router.get("/", getMessages);
+router.post("/", sendMessage);
+router.post("/:messageId/react", addReaction);
+
+export default router;

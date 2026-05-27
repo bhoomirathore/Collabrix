@@ -1,9 +1,10 @@
-﻿import http from "http";
+import http from "http";
 import dotenv from "dotenv";
 
 import app from "./app.js";
 import connectDB from "./config/db.js";
 import initSockets from "./sockets/index.js";
+import seedDatabase from "./seed.js";
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 const startServer = async () => {
   await connectDB();
+  await seedDatabase();
 
   const server = http.createServer(app);
 

@@ -1,1 +1,15 @@
-﻿import { Router } from "express";\nimport { processAI } from "../controllers/aiController.js";\nconst router = Router();\nrouter.post("/", processAI);\nexport default router;
+import { Router } from "express";
+import {
+  getSprintPlan,
+  getCodeReview,
+} from "../controllers/aiController.js";
+import authMiddleware from "../middleware/auth.js";
+
+const router = Router();
+
+router.use(authMiddleware);
+
+router.get("/sprint", getSprintPlan);
+router.get("/review", getCodeReview);
+
+export default router;

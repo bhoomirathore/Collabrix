@@ -1,37 +1,37 @@
-﻿import mongoose from "mongoose";
+import { createModel } from "./modelFactory.js";
 
-const userSchema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true,
-    },
-
-    password: {
-      type: String,
-      required: true,
-      minlength: 6,
-    },
-
-    avatar: {
-      type: String,
-      default: "",
-    },
+const userSchemaDef = {
+  name: {
+    type: String,
+    required: true,
+    trim: true,
   },
-  {
-    timestamps: true,
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true,
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 6,
+  },
+  avatar: {
+    type: String,
+    default: "",
+  },
+  status: {
+    type: String,
+    default: "online", // online, away, busy, offline
+  },
+  customStatus: {
+    type: String,
+    default: "",
   }
-);
+};
 
-const User = mongoose.model("User", userSchema);
+const User = createModel("User", userSchemaDef, "users");
 
 export default User;
