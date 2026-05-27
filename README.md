@@ -4,13 +4,22 @@
 
 **AI-powered real-time collaboration platform for modern developer teams.**
 
-[![Status](https://img.shields.io/badge/status-in%20development-yellow)](https://github.com)
-[![Stack](https://img.shields.io/badge/stack-MERN-blue)](https://github.com)
+[![Status](https://img.shields.io/badge/status-MVP%20ready-brightgreen)](https://github.com/javawithaaryan/Collabrix)
+[![Stack](https://img.shields.io/badge/stack-MERN-blue)](https://github.com/javawithaaryan/Collabrix)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 *One platform. Every tool your team needs.*
 
+> 🚀 **[Live Demo](https://collabrix.vercel.app)** · 📁 **[Report a Bug](https://github.com/javawithaaryan/Collabrix/issues)** · 💡 **[Request a Feature](https://github.com/javawithaaryan/Collabrix/issues)**
+
 </div>
+
+---
+
+<!-- Add a screenshot or GIF here once available -->
+<!-- Example: ![Collabrix Dashboard](./docs/assets/dashboard-preview.png) -->
+
+> ⚠️ **Screenshot placeholder** — add a dashboard GIF or screenshot at `docs/assets/` and update the line above. This is the first thing visitors look for.
 
 ---
 
@@ -36,38 +45,38 @@ Collabrix brings it all together — real-time chat, task management, project or
 
 ## Core Features
 
-### Authentication
+### 🔐 Authentication
 - Email/password, Google OAuth, GitHub OAuth
 - JWT-based sessions with protected routes
 - User profiles with skills, bio, avatar, and role
 
-### Workspaces
+### 🏢 Workspaces
 - Team environments with invite-based membership
 - Role system: Owner → Admin → Member → Viewer
 - Shared project and channel organization
 
-### Real-Time Chat
+### 💬 Real-Time Chat
 - Channel-based messaging powered by Socket.IO
 - Typing indicators, online presence, message timestamps
 - File sharing support
 
-### Task Management
+### ✅ Task Management
 - Kanban workflow: `Todo → In Progress → Review → Completed`
 - Task assignment, due dates, priority labels, comments
 - Visual progress tracking per project
 
-### Project Dashboard
+### 📊 Project Dashboard
 - Multiple projects per workspace
 - Activity feed, member management, timelines
 - Productivity overview at a glance
 
-### AI Assistant
-- Chat/discussion summaries
+### 🤖 AI Assistant (powered by Gemini API)
+- Chat and discussion summaries
 - Smart task suggestions and sprint planning ideas
 - Documentation generation (READMEs, descriptions, summaries)
 - Workflow optimization suggestions
 
-### Notifications
+### 🔔 Notifications
 - Task assignments, mentions, workspace invites
 - Project updates and AI-generated insights
 
@@ -89,72 +98,48 @@ Collabrix brings it all together — real-time chat, task management, project or
 - JWT + bcrypt — authentication & password hashing
 
 **AI**
-- OpenAI API / Gemini API
+- [Gemini API](https://ai.google.dev/) — AI assistant features
 
-**Deployment**
-- Frontend → [Vercel](https://vercel.com/)
-- Backend → [Render](https://render.com/) / [Railway](https://railway.app/)
-- Database → [MongoDB Atlas](https://www.mongodb.com/atlas)
 
 ---
 
 ## Project Structure
 
 ```
-COLLABRIX/
+collabrix/
 │
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── hooks/
-│   │   ├── layouts/
-│   │   ├── lib/
-│   │   ├── pages/
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Landing.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── NotFound.jsx
-│   │   │   ├── Project.jsx
-│   │   │   ├── Register.jsx
-│   │   │   └── Workspace.jsx
-│   │   ├── store/
-│   │   ├── utils/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   ├── routes.jsx
-│   │   └── index.css
-│   │
-│   ├── .env
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   └── postcss.config.js
+├── client/                     # Frontend (Vite + React)
+│   └── src/
+│       ├── components/
+│       ├── context/
+│       ├── hooks/
+│       ├── layouts/
+│       ├── pages/
+│       │   ├── Dashboard.jsx
+│       │   ├── Landing.jsx
+│       │   ├── Login.jsx
+│       │   ├── NotFound.jsx
+│       │   ├── Project.jsx
+│       │   ├── Register.jsx
+│       │   └── Workspace.jsx
+│       ├── store/
+│       └── utils/
 │
-├── server/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   │   ├── aiController.js
-│   │   │   ├── authController.js
-│   │   │   ├── chatController.js
-│   │   │   ├── projectController.js
-│   │   │   ├── taskController.js
-│   │   │   └── workspaceController.js
-│   │   │
-│   │   ├── middleware/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   ├── sockets/
-│   │   ├── utils/
-│   │   ├── app.js
-│   │   └── server.js
-│   │
-│   ├── .env
-│   ├── package.json
-│   └── node_modules/
+├── server/                     # Backend (Node.js + Express)
+│   └── src/
+│       ├── controllers/
+│       │   ├── aiController.js
+│       │   ├── authController.js
+│       │   ├── chatController.js
+│       │   ├── projectController.js
+│       │   ├── taskController.js
+│       │   └── workspaceController.js
+│       ├── middleware/
+│       ├── models/
+│       ├── routes/
+│       ├── services/
+│       ├── sockets/
+│       └── utils/
 │
 ├── .gitignore
 └── README.md
@@ -191,63 +176,71 @@ Socket.IO powers live collaboration across:
 - Password hashing with bcrypt
 - JWT validation on all protected routes
 - Role-based access control
-- Environment variable management
-- Rate limiting
-- Secure cookies
+- Environment variable management for secrets
 
 ---
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js v18+
+- MongoDB Atlas account (or local MongoDB)
+- Gemini API key
+
+### Installation
+
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/collabrix.git
-cd collabrix
+git clone https://github.com/javawithaaryan/Collabrix.git
+cd Collabrix
 
-# Install frontend dependencies
-cd frontend
+# Install client dependencies
+cd client
 npm install
 
-# Install backend dependencies
-cd ../backend
+# Install server dependencies
+cd ../server
 npm install
 ```
 
-Create a `.env` file in the backend directory:
+### Environment Setup
+
+Create a `.env` file inside the `server/` directory:
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_atlas_uri
 JWT_SECRET=your_jwt_secret
-OPENAI_API_KEY=your_openai_key   # or Gemini
+GEMINI_API_KEY=your_gemini_api_key
 CLIENT_URL=http://localhost:3000
 ```
 
+### Running Locally
+
 ```bash
-# Run backend
-cd backend
+# Start the backend (from server/)
 npm run dev
 
-# Run frontend (separate terminal)
-cd frontend
+# Start the frontend in a separate terminal (from client/)
 npm run dev
 ```
 
-Frontend runs at `http://localhost:3000`, backend at `http://localhost:5000`.
+Frontend runs at `http://localhost:5173`, backend at `http://localhost:4000`.
 
 ---
 
 ## MVP Scope
 
-**Shipping first:**
-- [x] Authentication system
-- [x] Workspace creation and invites
-- [x] Real-time team chat
-- [x] Task management (kanban)
-- [x] Project dashboard
-- [x] Basic AI summaries
+**Shipped:**
+- [x] Authentication system (email, Google OAuth, GitHub OAuth)
+- [x] Workspace creation and invite-based membership
+- [x] Real-time team chat with Socket.IO
+- [x] Task management (Kanban board)
+- [x] Project dashboard with activity feed
+- [x] Basic AI summaries via Gemini
 
-**Coming later:**
+**Planned:**
 - [ ] GitHub repository integration
 - [ ] Video calls and screen sharing
 - [ ] AI code review
@@ -259,7 +252,7 @@ Frontend runs at `http://localhost:3000`, backend at `http://localhost:5000`.
 
 ## Why JavaScript (not TypeScript)?
 
-Collabrix is intentionally built in JavaScript for faster iteration, easier onboarding, and a hackathon-friendly workflow. The goal is shipping a working product first. TypeScript can be adopted later as the codebase matures.
+Collabrix is intentionally built in JavaScript for faster iteration, easier onboarding, and a hackathon-friendly workflow. The goal is shipping a working product first. TypeScript migration is planned as the codebase matures.
 
 ---
 
@@ -283,3 +276,17 @@ Collabrix is intentionally built in JavaScript for faster iteration, easier onbo
 
 ---
 
+## Team
+
+| Name | Role |
+|---|---|---|
+| Aryan Rathore | Full Stack / Lead | 
+| Priyanshi Rai| Frontend |
+| Gargi dixit | Backend |
+| Bhoomi Rathore | Documentation |
+
+---
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.
