@@ -1,0 +1,358 @@
+{
+  "users": [
+    {
+      "_id": "uupclsdkesg08f22cca96zs",
+      "id": "uupclsdkesg08f22cca96zs",
+      "name": "Bhoomi Rathore",
+      "email": "bhoomi@collabrix.dev",
+      "password": "$2b$10$C.hM/MnloD7LglwQ4IXhsedmE.1JqRCEoqjerr8bdU0pZjd5wYFFe",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "status": "online",
+      "customStatus": "🚀 working on Vite bundle sizes",
+      "createdAt": "2026-05-27T10:42:32.062Z",
+      "updatedAt": "2026-05-27T10:42:32.063Z"
+    },
+    {
+      "_id": "ccme0yohmj7cmu3ly6rlg",
+      "id": "ccme0yohmj7cmu3ly6rlg",
+      "name": "Aryan Patel",
+      "email": "aryan@collabrix.dev",
+      "password": "$2b$10$C.hM/MnloD7LglwQ4IXhsedmE.1JqRCEoqjerr8bdU0pZjd5wYFFe",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "status": "busy",
+      "customStatus": "🛠️ debugging websocket handshakes",
+      "createdAt": "2026-05-27T10:42:32.066Z",
+      "updatedAt": "2026-05-27T10:42:32.066Z"
+    },
+    {
+      "_id": "deh5hw7w3cmpqo2muhsco",
+      "id": "deh5hw7w3cmpqo2muhsco",
+      "name": "Sarah Jenkins",
+      "email": "sarah@collabrix.dev",
+      "password": "$2b$10$C.hM/MnloD7LglwQ4IXhsedmE.1JqRCEoqjerr8bdU0pZjd5wYFFe",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "status": "away",
+      "customStatus": "☕ AFK for a moment",
+      "createdAt": "2026-05-27T10:42:32.067Z",
+      "updatedAt": "2026-05-27T10:42:32.067Z"
+    },
+    {
+      "_id": "240e3gm3tkugq3oa1a4089",
+      "id": "240e3gm3tkugq3oa1a4089",
+      "name": "Collabrix AI",
+      "email": "ai@collabrix.dev",
+      "password": "$2b$10$C.hM/MnloD7LglwQ4IXhsedmE.1JqRCEoqjerr8bdU0pZjd5wYFFe",
+      "avatar": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "status": "online",
+      "customStatus": "🤖 Ready to review PRs",
+      "createdAt": "2026-05-27T10:42:32.068Z",
+      "updatedAt": "2026-05-27T10:42:32.068Z"
+    },
+    {
+      "_id": "5qb4ujku6sdmokzsilwij",
+      "id": "5qb4ujku6sdmokzsilwij",
+      "name": "ritu jain",
+      "email": "ritu@collabrix.dev",
+      "password": "$2b$10$JywowHvI.VTSTTrEHuVeY.tMzLBTUTJoSNQDqEM9JLNnUTWHfk0fW",
+      "createdAt": "2026-05-27T10:51:07.323Z",
+      "updatedAt": "2026-05-27T10:51:07.323Z"
+    }
+  ],
+  "workspaces": [
+    {
+      "_id": "am8xkyq4z7bzaxqasin08",
+      "id": "am8xkyq4z7bzaxqasin08",
+      "name": "Collabrix Core",
+      "owner": "uupclsdkesg08f22cca96zs",
+      "members": [
+        "uupclsdkesg08f22cca96zs",
+        "ccme0yohmj7cmu3ly6rlg",
+        "deh5hw7w3cmpqo2muhsco",
+        "240e3gm3tkugq3oa1a4089"
+      ],
+      "tier": "pro",
+      "createdAt": "2026-05-27T10:42:32.069Z",
+      "updatedAt": "2026-05-27T10:42:32.069Z"
+    }
+  ],
+  "tasks": [
+    {
+      "_id": "98r3v9vq6abrayw021rxa",
+      "id": "98r3v9vq6abrayw021rxa",
+      "title": "Fix WebSocket reconnect failing after refresh",
+      "description": "When refreshing the page, the socket client drops connectivity and fails to automatically renegotiate handshake headers if the JWT token is near expiry. Need to refresh token in handshake middleware.",
+      "status": "in_progress",
+      "priority": "high",
+      "assignee": "ccme0yohmj7cmu3ly6rlg",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "category": "backend",
+      "sprint": "Sprint 3: Core Reliability",
+      "storyPoints": 3,
+      "createdAt": "2026-05-27T10:42:32.070Z",
+      "updatedAt": "2026-05-27T10:42:32.070Z"
+    },
+    {
+      "_id": "3haj9jibcl3fx2nt91oh8q",
+      "id": "3haj9jibcl3fx2nt91oh8q",
+      "title": "JWT rotation strategy & blacklist token verification",
+      "description": "Implement silent token refreshes and verify blacklisted tokens using Redis key expiration. This solves our multi-tab session expiry issues and increases auth safety.",
+      "status": "review",
+      "priority": "urgent",
+      "assignee": "deh5hw7w3cmpqo2muhsco",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "category": "backend",
+      "sprint": "Sprint 3: Core Reliability",
+      "storyPoints": 5,
+      "createdAt": "2026-05-27T10:42:32.072Z",
+      "updatedAt": "2026-05-27T10:42:32.072Z"
+    },
+    {
+      "_id": "nv54ds59twstpgv1qxp5c",
+      "id": "nv54ds59twstpgv1qxp5c",
+      "title": "Vite optimization and asset bundle size reduction",
+      "description": "Split vendors out into distinct chunks and utilize compression plugins. Reduces landing load time by 40%.",
+      "status": "done",
+      "priority": "low",
+      "assignee": "uupclsdkesg08f22cca96zs",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "category": "frontend",
+      "sprint": "Sprint 3: Core Reliability",
+      "storyPoints": 2,
+      "createdAt": "2026-05-27T10:42:32.073Z",
+      "updatedAt": "2026-05-27T10:42:32.073Z"
+    },
+    {
+      "_id": "mrvf6nvqsc9ngn5zyaod8g",
+      "id": "mrvf6nvqsc9ngn5zyaod8g",
+      "title": "Redis adapter for pub/sub horizontal scaling",
+      "description": "Transition our direct in-memory WebSocket event dispatching to utilize a Redis Pub/Sub adapter to allow multi-instance socket synchronization.",
+      "status": "todo",
+      "priority": "high",
+      "assignee": "ccme0yohmj7cmu3ly6rlg",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "category": "devops",
+      "sprint": "Sprint 3: Core Reliability",
+      "storyPoints": 8,
+      "createdAt": "2026-05-27T10:42:32.074Z",
+      "updatedAt": "2026-05-27T10:42:32.074Z"
+    },
+    {
+      "_id": "zc2jf2rh6illoo48p7bi",
+      "id": "zc2jf2rh6illoo48p7bi",
+      "title": "Document deployment architecture and failover playbooks",
+      "description": "Write explicit deployment wiki notes outlining Docker Compose setups, Nginx reversions, and Redis master-slave syncing.",
+      "status": "todo",
+      "priority": "medium",
+      "assignee": "uupclsdkesg08f22cca96zs",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "category": "docs",
+      "sprint": "Sprint 3: Core Reliability",
+      "storyPoints": 3,
+      "createdAt": "2026-05-27T10:42:32.075Z",
+      "updatedAt": "2026-05-27T10:42:32.075Z"
+    }
+  ],
+  "messages": [
+    {
+      "_id": "zj6a68fszia6a1v4bklh6",
+      "id": "zj6a68fszia6a1v4bklh6",
+      "text": "Hey team! Happy Monday. Let's make sure we stay focused on Sprint 3 reliability goals.",
+      "sender": "uupclsdkesg08f22cca96zs",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "createdAt": "2026-05-27T10:42:32.083Z",
+      "updatedAt": "2026-05-27T10:42:32.083Z"
+    },
+    {
+      "_id": "yhch5v4naakzulh8agdrn",
+      "id": "yhch5v4naakzulh8agdrn",
+      "text": "Socket reconnect is failing after refresh when the JWT token expires. I'm digging into it now.",
+      "sender": "ccme0yohmj7cmu3ly6rlg",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "createdAt": "2026-05-27T10:42:32.084Z",
+      "updatedAt": "2026-05-27T10:42:32.084Z"
+    },
+    {
+      "_id": "4r5u8s95jekwmpnds811ve",
+      "id": "4r5u8s95jekwmpnds811ve",
+      "text": "Can someone review auth middleware? I just posted the JWT rotation strategy wiki and shared the code snippet.",
+      "sender": "deh5hw7w3cmpqo2muhsco",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "createdAt": "2026-05-27T10:42:32.085Z",
+      "updatedAt": "2026-05-27T10:42:32.085Z"
+    },
+    {
+      "_id": "6xo2xxblsw85md64e0ca3",
+      "id": "6xo2xxblsw85md64e0ca3",
+      "text": "Redis adapter fixed horizontal scaling. Spun up a local node with 3 client cluster forks, events sync perfectly!",
+      "sender": "ccme0yohmj7cmu3ly6rlg",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "createdAt": "2026-05-27T10:42:32.086Z",
+      "updatedAt": "2026-05-27T10:42:32.086Z"
+    },
+    {
+      "_id": "fydk2sti7qkiu0qsr89ho",
+      "id": "fydk2sti7qkiu0qsr89ho",
+      "text": "Checking Sarah's auth middleware now. I analyzed the JWT rotation schema—the silent HttpOnly refresh flow looks extremely secure. I've added a few optimization notes.",
+      "sender": "240e3gm3tkugq3oa1a4089",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "createdAt": "2026-05-27T10:42:32.087Z",
+      "updatedAt": "2026-05-27T10:42:32.088Z"
+    }
+  ],
+  "wikis": [
+    {
+      "_id": "l19i3v9df8rcg25jrxmd",
+      "id": "l19i3v9df8rcg25jrxmd",
+      "title": "Deployment Architecture",
+      "content": "# Production Deployment Architecture\n\nThis document describes the high-availability deployment structure for the Collabrix Core services.\n\n## Architecture Diagram Overview\n```\n                     [ Nginx Reverse Proxy ]\n                               |\n            +------------------+------------------+\n            |                                     |\n   [ Node Instance 1 ]                   [ Node Instance 2 ]\n   (Port: 4001, Sockets)                 (Port: 4002, Sockets)\n            |                                     |\n            +------------------+------------------+\n                               |\n                     [ Redis Pub/Sub Adapter ]\n                               |\n                     [ MongoDB Database Cluster ]\n```\n\n## Failover Strategy & PM2\nWe utilize PM2 clustering on the production server to fork instances across active CPU cores. If an instance encounters a memory overflow or unhandled rejection, PM2 restarts it immediately with an automated backoff.\n\n### Setup Instructions\n1. Run `pm2 start src/index.js -i max`\n2. Configure Nginx upstream headers to support sticky sessions for Socket.io.\n",
+      "author": "uupclsdkesg08f22cca96zs",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "slug": "deployment-architecture",
+      "createdAt": "2026-05-27T10:42:32.076Z",
+      "updatedAt": "2026-05-27T10:42:32.076Z"
+    },
+    {
+      "_id": "o5y0tjblt8fqx4orts9gr",
+      "id": "o5y0tjblt8fqx4orts9gr",
+      "title": "Auth Decisions & Token Rotation",
+      "content": "# JWT Auth Decisions and Rotation Architecture\n\nTo maintain high security while supporting seamless developer collaboration, we implement stateless JSON Web Tokens with a sliding expiration window.\n\n## Token Policies\n- **Access Token Expiry**: 15 minutes\n- **Refresh Token Expiry**: 7 days (stored securely in HttpOnly, SameSite cookies)\n- **Token Rotation**: Each refresh token exchange invalidates the old refresh token and issues a new pair, mitigating replay attacks.\n\n## Middleware Example\nSee the **JWT Auth Middleware** snippet inside the Snippets panel for the exact implementation details. Blacklisted keys are stored directly inside our Redis instance with an automatic TTL match.\n",
+      "author": "deh5hw7w3cmpqo2muhsco",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "slug": "auth-decisions",
+      "createdAt": "2026-05-27T10:42:32.077Z",
+      "updatedAt": "2026-05-27T10:42:32.077Z"
+    }
+  ],
+  "snippets": [
+    {
+      "_id": "htfywdbqot6rhvyjrca4v8",
+      "id": "htfywdbqot6rhvyjrca4v8",
+      "title": "JWT Auth Middleware",
+      "code": "import jwt from \"jsonwebtoken\";\nimport User from \"../models/User.js\";\n\nconst authMiddleware = async (req, res, next) => {\n  try {\n    const authHeader = req.header(\"Authorization\");\n    if (!authHeader || !authHeader.startsWith(\"Bearer \")) {\n      return res.status(401).json({ message: \"No token, authorization denied\" });\n    }\n\n    const token = authHeader.split(\" \")[1];\n    const decoded = jwt.verify(token, process.env.JWT_SECRET);\n    \n    // Optional check: Ensure token is not in Redis blacklist\n    // const isBlacklisted = await redis.get(`blacklist:${decoded.jti}`);\n    // if (isBlacklisted) return res.status(401).json({ message: \"Token has been revoked\" });\n\n    req.user = await User.findById(decoded.id).select(\"-password\");\n    next();\n  } catch (error) {\n    res.status(401).json({ message: \"Token is not valid\" });\n  }\n};\n\nexport default authMiddleware;",
+      "language": "javascript",
+      "author": "deh5hw7w3cmpqo2muhsco",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "description": "Express route middleware designed to capture Bearer tokens, verify authenticity, and mount decrypted User context.",
+      "createdAt": "2026-05-27T10:42:32.078Z",
+      "updatedAt": "2026-05-27T10:42:32.078Z"
+    },
+    {
+      "_id": "8lt1cpoix6a5qjq31hq9",
+      "id": "8lt1cpoix6a5qjq31hq9",
+      "title": "Socket Auth Connector",
+      "code": "import { io } from \"socket.io-client\";\n\nlet socket;\n\nexport const initiateSocketConnection = (token, workspaceId) => {\n  socket = io(import.meta.env.VITE_API_URL.replace(\"/api\", \"\"), {\n    auth: {\n      token: `Bearer ${token}`,\n      workspaceId\n    },\n    reconnection: true,\n    reconnectionAttempts: 10,\n    reconnectionDelay: 1000,\n  });\n\n  socket.on(\"connect\", () => {\n    console.log(\"Connected to Realtime Gateway:\", socket.id);\n  });\n\n  socket.on(\"connect_error\", (err) => {\n    console.error(\"Connection Error:\", err.message);\n  });\n\n  return socket;\n};",
+      "language": "javascript",
+      "author": "ccme0yohmj7cmu3ly6rlg",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "description": "Frontend socket connector with robust auto-reconnection configuration and authentication payload delivery.",
+      "createdAt": "2026-05-27T10:42:32.080Z",
+      "updatedAt": "2026-05-27T10:42:32.080Z"
+    }
+  ],
+  "resources": [
+    {
+      "_id": "c5w5xmj9stlikz6gijhehb",
+      "id": "c5w5xmj9stlikz6gijhehb",
+      "title": "Socket.io Client Resilience Guide",
+      "url": "https://socket.io/docs/v4/client-offline-behavior/",
+      "category": "documentation",
+      "description": "Detailed official manuals for client connection drops, network switching, and reconnection algorithms.",
+      "annotation": "Aryan: Read this before fixing the reconnect failing. Standard retry timeouts are too long and we need sticky handshakes.",
+      "savedBy": [
+        "ccme0yohmj7cmu3ly6rlg",
+        "uupclsdkesg08f22cca96zs"
+      ],
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "associatedTask": "Fix WebSocket reconnect failing after refresh",
+      "sprint": "Sprint 3: Core Reliability",
+      "createdAt": "2026-05-27T10:42:32.081Z",
+      "updatedAt": "2026-05-27T10:42:32.081Z"
+    },
+    {
+      "_id": "t6rkcv5tj6pw9pin0lyg7e",
+      "id": "t6rkcv5tj6pw9pin0lyg7e",
+      "title": "Vite Bundle Analyzer Plugin",
+      "url": "https://github.com/remcohaszing/rollup-plugin-visualizer",
+      "category": "tool",
+      "description": "Visualizes the size of Rollup output files with an interactive zoomable treemap.",
+      "annotation": "Bhoomi: Use this tool to verify our chunk splitting. I got our core vendor payload down to 180kb!",
+      "savedBy": [
+        "uupclsdkesg08f22cca96zs",
+        "deh5hw7w3cmpqo2muhsco",
+        "ccme0yohmj7cmu3ly6rlg"
+      ],
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "associatedTask": "Vite optimization and asset bundle size reduction",
+      "sprint": "Sprint 3: Core Reliability",
+      "createdAt": "2026-05-27T10:42:32.082Z",
+      "updatedAt": "2026-05-27T10:42:32.082Z"
+    }
+  ],
+  "events": [
+    {
+      "_id": "sw0b8uxjdq15zq1pqtl9x",
+      "id": "sw0b8uxjdq15zq1pqtl9x",
+      "type": "task_moved",
+      "message": "Bhoomi Rathore moved 'Vite optimization and asset bundle size reduction' to Done",
+      "user": "uupclsdkesg08f22cca96zs",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "targetType": "task",
+      "targetId": "nv54ds59twstpgv1qxp5c",
+      "meta": {
+        "category": "frontend",
+        "sprint": "Sprint 3"
+      },
+      "createdAt": "2026-05-27T10:42:32.089Z",
+      "updatedAt": "2026-05-27T10:42:32.089Z"
+    },
+    {
+      "_id": "y5wltxyfmxoaq02rtnmz7c",
+      "id": "y5wltxyfmxoaq02rtnmz7c",
+      "type": "wiki_updated",
+      "message": "Sarah Jenkins updated wiki page: Auth Decisions & Token Rotation",
+      "user": "deh5hw7w3cmpqo2muhsco",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "targetType": "wiki",
+      "targetId": "o5y0tjblt8fqx4orts9gr",
+      "createdAt": "2026-05-27T10:42:32.090Z",
+      "updatedAt": "2026-05-27T10:42:32.090Z"
+    },
+    {
+      "_id": "5widy8oty8647a7tvbltmp",
+      "id": "5widy8oty8647a7tvbltmp",
+      "type": "snippet_created",
+      "message": "Aryan Patel shared snippet: Socket Auth Connector",
+      "user": "ccme0yohmj7cmu3ly6rlg",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "targetType": "snippet",
+      "createdAt": "2026-05-27T10:42:32.091Z",
+      "updatedAt": "2026-05-27T10:42:32.091Z"
+    },
+    {
+      "_id": "cfrbdwt9t1bs7rga1yuhem",
+      "id": "cfrbdwt9t1bs7rga1yuhem",
+      "type": "ai_review_generated",
+      "message": "Collabrix AI generated security review for task: JWT rotation strategy",
+      "user": "240e3gm3tkugq3oa1a4089",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "targetType": "review",
+      "meta": {
+        "rating": "A+",
+        "points": 5
+      },
+      "createdAt": "2026-05-27T10:42:32.092Z",
+      "updatedAt": "2026-05-27T10:42:32.092Z"
+    },
+    {
+      "_id": "wcgdeqnwqdoebq640r60f8",
+      "id": "wcgdeqnwqdoebq640r60f8",
+      "type": "resource_saved",
+      "message": "Bhoomi Rathore bookmarked: Vite Bundle Analyzer Plugin",
+      "user": "uupclsdkesg08f22cca96zs",
+      "workspaceId": "am8xkyq4z7bzaxqasin08",
+      "targetType": "resource",
+      "createdAt": "2026-05-27T10:42:32.094Z",
+      "updatedAt": "2026-05-27T10:42:32.094Z"
+    }
+  ]
+}
